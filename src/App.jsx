@@ -29,7 +29,7 @@ function App() {
   }
 
   return (
-   <div className="app">
+   <div >
       <Container>
       <Form addTask={addTask}/>
       <TodoList isCompleted={isCompleted} removeTask={removeTask}todos={todos}/>

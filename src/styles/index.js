@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
 import img from "../img/background.png";
-import large from '../img/background-large.png';
 import {media} from './media';
 
 export const GlobalStyle = createGlobalStyle`
@@ -19,30 +18,39 @@ export const GlobalStyle = createGlobalStyle`
         background-size: cover;
         height: 100vh;
         
+        
+
+        
     }
 
 `
 
 export const Container = styled.div`
-    width: 500px;
-    margin:100px auto 0 auto;
+    width: 31rem;
+    margin:6.25rem auto 0 auto;
     background: #d1d1d1;
     align-items: center;
     border-radius: 10px;
-    padding: 20px;
-
+    padding: 1.25rem;
 
     ${media.mobile`
-        width: 300px;
-        margin-bottom:20px ;
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
         
-    `}
-    ${media.large`
-        width: 600px;
-        padding: 40px;
-    
     
     `}
+
+    ${media.tablet`
+       width: 80vw;
+       text-align:center;
+    
+    `}
+
+
+  
+
+    
     
 `
 
@@ -52,40 +60,40 @@ export const Formulario = styled.form`
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        
-    `}
-    ${media.tablet`
-        
-        display: flex;
-        justify-content:center;
-        align-items:center;
-        gap:20px;
+        gap:1em;
     
     `}
-
-    ${media.large`
+    ${media.tablet`
         display: flex;
-        justify-content:space-between;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:1.2rem;
+    
     
     `}
 
     input{
         border: none;
         border-radius: 5px;
-        width: 300px;
-        height: 40px;
-        padding-left:10px;
-            
+        width: 20rem;
+        height: 3rem;
+        padding-left:.9rem;
+
         ${media.mobile`
-            width: 200px;
-            height: 30px;
+            width:16rem;
+            height: 2.9rem;
             text-align:center;
-            margin-top:5px ;
-        `}
-        ${media.large`
-            width: 20rem;
-            height: 4rem;
-            font-size:1.3rem;
+        
+        `
+        }
+
+        ${media.tablet`
+            width: 70vw;
+            font-size:1.2em;
+            padding-left:.9rem;
+            
+        
         
         `}
        
@@ -93,30 +101,30 @@ export const Formulario = styled.form`
     button{
         border: none;
         border-radius: 5px;
-        height: 40px;
+        height: 2.9rem;
         background-color: #003329;
         color: #ffffff;
-        font-size: 17px;
-        padding: 0 15px;
+        font-size: 1.2rem;
+        padding: 0 .9rem;
         float: right;
         cursor: pointer;
-
-        ${media.mobile`
-            font-size:12px;
-            height: 30px;
-            padding: 0 10px;
-            margin-top:10px;
-        `}
-
-        ${media.large`
-            font-size:1.5rem;
-            height: 4rem;
-            font-weight:bold;
-        
-        `}
+        font-weight:bold;
         &:hover{
             opacity: 0.8;
         }
+
+        ${media.mobile`
+            height: 2.2rem;
+            padding: 0 .5rem;
+            font-size:1rem;
+
+        `}
+        ${media.tablet`
+            padding: 0 1.9rem;
+            height: 3.5rem;
+        
+        
+        `}
     }
 
 `
@@ -127,7 +135,7 @@ export const Imagem = styled.img`
     cursor: pointer;
     ${media.mobile`
         opacity:1;
-        height: 20px;
+        height: 1.20rem;
 
     `}
     ${media.tablet`
@@ -142,10 +150,8 @@ export const Lista = styled.ul`
     width: 100%;
     list-style: none;
     margin-top: 30px;
-    ${media.mobile`
-        font-size:12px;
-        text-align:center;
-    `}
+    
+   
 `  
 export const ItemLista = styled.li`
     background-color: ${(props)=>(props.checked ? "#8fac55":"#f2f2f2")};
@@ -153,7 +159,7 @@ export const ItemLista = styled.li`
     color: ${(props)=>(props.checked ? "#ffffff": "#000000")};
     box-shadow: 1px 4px 10px rgba(0,0,0,0.2);
     display: flex;
-    height: 50px;
+    height: 3.1rem;
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
@@ -161,10 +167,14 @@ export const ItemLista = styled.li`
     &:hover img{
         opacity: 1 ;
     }
-    ${media.large`
-        font-size:1.3rem;
+
+    ${media.tablet`
+        height: 3.5rem;
+        
+    
     
     `}
+    
 
 
 `
