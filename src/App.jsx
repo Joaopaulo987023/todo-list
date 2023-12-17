@@ -3,7 +3,7 @@ import { useState } from "react"
 import Form from "./components/Form"
 import { Container } from "./styles"
 import TodoList from "./components/Lista/TodoList";
-
+import { Titulo } from "./styles";
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
   return (
    <div >
       <Container>
+        <Titulo>To do List</Titulo>
       <Form addTask={addTask}/>
       <TodoList isCompleted={isCompleted} removeTask={removeTask}todos={todos}/>
     </Container>

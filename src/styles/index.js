@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import img from "../img/background.png";
 import {media} from './media';
-
 export const GlobalStyle = createGlobalStyle`
     *{
         margin: 0;
@@ -24,6 +23,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
 `
+export const Titulo=styled.h1`
+    margin-bottom:1.25rem;
+    font-weight: bold;
+`
+
 
 export const Container = styled.div`
     width: 31rem;
@@ -32,6 +36,7 @@ export const Container = styled.div`
     align-items: center;
     border-radius: 10px;
     padding: 1.25rem;
+    text-align: center;
 
     ${media.mobile`
         width: 90vw;
