@@ -1,4 +1,4 @@
-# Big Game Survey 
+# Todo-list
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/Joaopaulo987023/todo-list/blob/main/LICENSE) 
 
 # Sobre o projeto
