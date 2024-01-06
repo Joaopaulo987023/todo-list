@@ -5,9 +5,11 @@ import { Formulario } from "../styles"
 
 export default function Form({addTask}) {
 
+  
 
   const[text, setText]=useState('');
 
+  
   const handleChange=(e)=>{
     const valor = e.target.value;
     const valorComLetraMaiusculas = valor.charAt(0).toUpperCase() + valor.slice(1);

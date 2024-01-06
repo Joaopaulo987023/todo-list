@@ -1,18 +1,18 @@
 import styled, { createGlobalStyle } from "styled-components";
-import img from "../img/background.png";
 import {media} from './media';
 export const GlobalStyle = createGlobalStyle`
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
+        font-family: ${({theme})=>theme.fontPadrao};
         outline: none;
+        color: ${({theme})=>theme.colors.texto};
         
         
     }
     body{
-        background: url(${img});
+        background:${(props)=>props.theme.colors.background};
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
@@ -32,7 +32,7 @@ export const Titulo=styled.h1`
 export const Container = styled.div`
     width: 31rem;
     margin:6.25rem auto 0 auto;
-    background: #d1d1d1;
+    background: ${({theme})=>theme.colors.container};
     align-items: center;
     border-radius: 10px;
     padding: 1.25rem;
@@ -84,6 +84,8 @@ export const Formulario = styled.form`
         width: 20rem;
         height: 3rem;
         padding-left:.9rem;
+        background-color:#fff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
         ${media.mobile`
             width:16rem;
@@ -107,10 +109,10 @@ export const Formulario = styled.form`
         border: none;
         border-radius: 5px;
         height: 2.9rem;
-        background-color: #003329;
-        color: #ffffff;
+        background-color: ${({theme})=>theme.colors.botao};
         font-size: 1.2rem;
         padding: 0 .9rem;
+        color:#fff;
         float: right;
         cursor: pointer;
         font-weight:bold;
@@ -156,10 +158,11 @@ export const Lista = styled.ul`
     list-style: none;
     margin-top: 30px;
     
+    
    
 `  
 export const ItemLista = styled.li`
-    background-color: ${(props)=>(props.checked ? "#8fac55":"#f2f2f2")};
+    background-color: ${(props)=>(props.checked ? "#8fac55":"#ffff")};
     border-radius: 5px;
     color: ${(props)=>(props.checked ? "#ffffff": "#000000")};
     box-shadow: 1px 4px 10px rgba(0,0,0,0.2);
