@@ -26,6 +26,10 @@ export const GlobalStyle = createGlobalStyle`
 export const Titulo=styled.h1`
     margin-bottom:1.25rem;
     font-weight: bold;
+    ${media.mobile`
+        font-size:1.5rem;
+    
+    `}
 `
 
 
@@ -42,6 +46,7 @@ export const Container = styled.div`
         width: 90vw;
         justify-content: center;
         align-items: center;
+       
         
     
     `}
@@ -91,6 +96,11 @@ export const Formulario = styled.form`
             width:16rem;
             height: 2.9rem;
             text-align:center;
+            font-size:0.9rem;
+            &::placeholder{
+                font-size:.9rem;
+                text-align:center;
+            }
         
         `
         }
@@ -124,6 +134,7 @@ export const Formulario = styled.form`
             height: 2.2rem;
             padding: 0 .5rem;
             font-size:1rem;
+            opacity: 1;
 
         `}
         ${media.tablet`
@@ -134,6 +145,22 @@ export const Formulario = styled.form`
         `}
     }
 
+`
+
+export const ClearAll = styled.button`
+     margin-top: 20px;
+     border: none;
+     border-radius: 5px;
+     height: 2.5rem;
+     background-color:#424769;
+     font-size: 1rem;
+     color: #fff;
+     cursor: pointer;
+     font-weight:bold;
+     width: 10rem;
+     &:hover{
+        opacity: 0.8;
+     }
 `
 export const Imagem = styled.img`
     height:25px;
@@ -162,9 +189,10 @@ export const Lista = styled.ul`
    
 `  
 export const ItemLista = styled.li`
-    background-color: ${(props)=>(props.checked ? "#8fac55":"#ffff")};
+    background-color: ${(props)=>props.checked ? "#8fac55":"#ffff"};
     border-radius: 5px;
-    color: ${(props)=>(props.checked ? "#ffffff": "#000000")};
+    color:#000;
+    text-decoration: ${(props)=>props.checked ? "line-through" : ""};
     box-shadow: 1px 4px 10px rgba(0,0,0,0.2);
     display: flex;
     height: 3.1rem;
@@ -175,6 +203,13 @@ export const ItemLista = styled.li`
     &:hover img{
         opacity: 1 ;
     }
+
+    ${media.mobile`
+        
+        padding: 0 15px;
+        font-size:.9rem;
+    
+    `}
 
     ${media.tablet`
         height: 3.5rem;

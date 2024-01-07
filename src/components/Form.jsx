@@ -1,15 +1,9 @@
-import { useState,useRef } from "react"
+import { useRef } from "react"
 import { Formulario } from "../styles" 
 
 
 
-export default function Form({addTask}) {
-
-  
-
-  const[text, setText]=useState('');
-
-  
+export default function Form({addTask,text,setText}) {
   const handleChange=(e)=>{
     const valor = e.target.value;
     const valorComLetraMaiusculas = valor.charAt(0).toUpperCase() + valor.slice(1);

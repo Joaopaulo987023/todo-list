@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react"
 import Form from "./components/Form"
-import { Container } from "./styles"
+import { ClearAll, Container } from "./styles"
 import TodoList from "./components/Lista/TodoList";
 import { Titulo } from "./styles";
 
@@ -9,6 +9,7 @@ const LOCAL_STORAGE_KEY="todo:savedTasks";
 
 function App() {
   const[todos, setTodos]=useState([]);
+  const[text, setText]=useState('');
 
   const setTextAndSave = (newsTask)=>{
     setTodos(newsTask);
@@ -25,11 +26,16 @@ function App() {
     loadSavedTask()
   },[])
   const addTask=(todo)=>{
-    setTextAndSave([...todos,todo])
+    if(todos.some(todo => todo.text === text)){
+      alert("já existe") //verificando se o ultimo item digitado já existe na lista
+      setTextAndSave([...todos])
+    }else{
+      setTextAndSave([...todos,todo])
+    }
+    
     
   }
   const removeTask = (id)=>{
-    console.log(id)
     const newList = todos.filter((todo)=>todo.id!==id);
     setTextAndSave(newList);
     
@@ -41,11 +47,18 @@ function App() {
     
   }
 
+  const handleClick =()=>{
+    setTextAndSave([])
+
+
+  }
+   
   return (
    <div >
       <Container>
-        <Titulo>To do List</Titulo>
-      <Form addTask={addTask}/>
+        <Titulo>Lista de Tarefas</Titulo>
+      <Form addTask={addTask} setText={setText} text={text}/>
+      <ClearAll onClick={handleClick}>Limpar lista</ClearAll>
       <TodoList isCompleted={isCompleted} removeTask={removeTask}todos={todos}/>
     </Container>
    </div>
