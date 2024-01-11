@@ -63,15 +63,15 @@ export const Formulario = styled.form`
         float: right;
         cursor: pointer;
         font-weight:bold;
+        &:hover{
+            opacity: 0.8;
+        }
         ${media.mobile`
             font-size:.9rem;
             height: 2.2rem;
             padding: 0 .5rem;
+            opacity: 1;
         `}
-        
-        &:hover{
-            opacity: 0.8;
-        }
 
         
     }

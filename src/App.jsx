@@ -9,7 +9,7 @@ import Modal from "./components/Modal/Modal";
 const LOCAL_STORAGE_KEY="todo:savedTasks";
 
 function App() {
-  const[openModal, setOpenModal]=useState(false)
+  const[openModal, setOpenModal]=useState(true)
   const[todos, setTodos]=useState([]);
   const[text, setText]=useState('');
 
@@ -28,7 +28,7 @@ function App() {
     loadSavedTask()
   },[])
   const addTask=(todo)=>{
-    if(todos.some(todo => todo.text === text)){
+    if(todos.some(todo => todo.text.replace(/\s/g,'') === text.replace(/\s/g,''))){
      //verificando se o ultimo item digitado já existe na lista
       setOpenModal(true);
       setTextAndSave([...todos])

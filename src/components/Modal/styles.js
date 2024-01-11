@@ -17,7 +17,7 @@ export const ContainerModal = styled.div`
         background-color: #fff;
         border-radius: 8px;
         ${media.mobile`
-            padding: 40px;
+            padding: 25px;
             font-size: 12px;
         `}
             h2{
@@ -33,7 +33,7 @@ export const ContainerModal = styled.div`
             font-weight: bold;
             font-size: 1rem;
             cursor: pointer;
-           &:hover{
+            &:hover{
                 opacity: 0.8;
            }
         }
