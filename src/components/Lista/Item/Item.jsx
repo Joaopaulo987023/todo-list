@@ -1,5 +1,5 @@
 import React from 'react';
-import { Imagem, ItemLista } from '../../../styles';
+import { Imagem, ItemLista } from './styles';
 import Img from "../../../img/checked.png";
 import Img2 from '../../../img/trash.png';
 export default function Item({text,id,removeTask,isCompleted,checked}) {

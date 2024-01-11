@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { Formulario } from "../styles" 
+import {Formulario} from "./styles" 
 
 
 

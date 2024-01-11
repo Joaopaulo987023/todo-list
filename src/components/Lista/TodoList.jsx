@@ -1,4 +1,4 @@
-import { Lista } from "../../styles";
+import { Lista } from "./styles";
 import Item from "./Item/Item";
 
 
