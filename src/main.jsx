@@ -4,16 +4,19 @@ import App from './App.jsx'
 import { GlobalStyle } from './styles/index.js'
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/Theme.js';
+import TodoProvider from './context/TodoProvider.jsx';
 
 
 const rootElement = document.getElementById('root');
 if (rootElement !== null) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-      <ThemeProvider theme={theme}>
-        <App/>
-        <GlobalStyle/>
-      </ThemeProvider>
+      <TodoProvider>
+        <ThemeProvider theme={theme}>
+          <App/>
+          <GlobalStyle/>
+        </ThemeProvider>
+      </TodoProvider>
     </React.StrictMode>,
   );
 }
