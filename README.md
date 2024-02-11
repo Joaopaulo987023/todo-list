@@ -10,10 +10,10 @@ Todo list é uma aplicação front end web e mobile feita por mim usando como ba
 A aplicação consiste em uma lista de tarefas onde você pode adicionar um novo item a essa lista, marcar quando for completo e também excluir o item dessa lista.
 
 ## Layout mobile
-![Mobile 1](https://github.com/Joaopaulo987023/assets/blob/main/mobile1.jpeg) ![Mobile 2](https://github.com/Joaopaulo987023/assets/blob/main/mobile2.jpeg)
+![Mobile 1](https://github.com/Joaopaulo987023/assets/blob/main/iPhone%2012%20Pro-1704928570624.jpeg) ![Mobile 2](https://github.com/Joaopaulo987023/assets/blob/main/iPhone%2012%20Pro-1706439546071.jpeg)
 
 ## Layout web
-![Web 1](https://github.com/Joaopaulo987023/assets/blob/main/web.jpeg)
+![Web 1](https://github.com/Joaopaulo987023/assets/blob/main/MacBook%20Pro-1704928589676.jpeg)
 
 
 
